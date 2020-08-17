@@ -1,3 +1,3 @@
 # Portfolio
 
-Simple portfolio using React hosted on GitHub as a gh-page and linked to the domain mkanaan.de
+Simple portfolio using React hosted on GitHub as a gh-page and linked to the domain https://mkanaan.de
