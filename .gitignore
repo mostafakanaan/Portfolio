@@ -23,3 +23,5 @@ yarn-error.log*
 *.suo
 *.user
 *.sln
+/bin
+/obj/Debug
