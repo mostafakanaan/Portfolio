@@ -4,7 +4,8 @@ import '../style.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+          <header className="App-header">
+              <img src="../favicon.ico" className="App-logo" alt="icon" />
         <p>
           Working on it...
         </p>
