@@ -24,4 +24,4 @@ yarn-error.log*
 *.user
 *.sln
 /bin
-/obj/Debug
+/obj/*
