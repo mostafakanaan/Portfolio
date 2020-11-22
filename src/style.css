@@ -27,9 +27,9 @@ code {
     }
 }
 
-.App-header {
+.Home {
     background-color: #282c34;
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,4 +50,13 @@ code {
     to {
         transform: rotate(360deg);
     }
+}
+
+.line{
+  width: 50%;
+  height: 3px;
+  border-bottom: 3px solid white;
+  position: inherit;
+  margin-top: 2px;
+  margin-bottom: 20px;
 }
