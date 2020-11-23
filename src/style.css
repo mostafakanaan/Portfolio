@@ -60,3 +60,8 @@ code {
   margin-top: 2px;
   margin-bottom: 20px;
 }
+
+.clickableIcon {
+    cursor: pointer;
+    margin: 20px
+}
