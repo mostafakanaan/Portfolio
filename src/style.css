@@ -65,3 +65,11 @@ code {
     cursor: pointer;
     margin: 20px
 }
+
+.fade {
+  animation: fade-in-keyframes 0.5s;
+}
+@keyframes fade-in-keyframes {
+  from {opacity: 0}
+  to {opacity: 1}
+}
