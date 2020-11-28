@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
-import '../src/fontawesome/css/all.css';
 import App from './App';
 
 const loader = document.querySelector('.loader');

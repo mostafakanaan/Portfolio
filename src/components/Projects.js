@@ -5,8 +5,7 @@ import Project from './Utils/Project'
 export default class Projects extends Component {
     render() {
         return (
-            <div className="row Page" id="work">
-                <Container>
+            <div className="Page" id="work">
                     <Row md={3}>
                         <Col><Project /></Col>
                         <Col><Project /></Col>
@@ -17,7 +16,6 @@ export default class Projects extends Component {
                         <Col><Project /></Col>
                         <Col><Project /></Col>
                     </Row>
-                </Container>
             </div>
         )
     }

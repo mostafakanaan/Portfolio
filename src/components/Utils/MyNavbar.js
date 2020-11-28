@@ -1,6 +1,5 @@
 import React from 'react';
 import { Navbar, Nav, Badge } from 'react-bootstrap';
-import MyIcon from './MyIcon';
 
 export default class MyNavbar extends React.Component {
     render() {
@@ -16,11 +15,7 @@ export default class MyNavbar extends React.Component {
                     </Nav>
 
                     <Nav className="ml-auto">
-                        <MyIcon uri='https://facebook.com/SteveKanaan/' icon='fab fa-facebook' />
-                        <MyIcon uri='https://instagram.com/_dermusti/' icon='fab fa-instagram' />
-                        <span className='clickableIcon'>
-                            <i className='far fa-envelope' onClick={() => { window.open('/#contact', '_self') }}></i>
-                        </span>
+                        <Nav.Link href="#contact"><h5>Say hi!</h5></Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

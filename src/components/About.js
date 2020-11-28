@@ -4,7 +4,7 @@ import {Container, Carousel} from 'react-bootstrap'
 export default class About extends Component {
     render() {
         return (
-            <div className="row Page" id="about">
+            <div className="Page" id="about">
                 <Container>
                     <Carousel>
                         <Carousel.Item>

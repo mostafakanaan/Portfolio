@@ -2,16 +2,31 @@
     --main-color: #282c34;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    min-height: 100%;
+}
+
+body>#root>div {
+    height: 100vh;
 }
 
 .App {
     text-align: center;
-    background-color: var(--main-color);
+    background: url(img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+    /* background-color: var(--main-color); */
 }
 
 .loader {
@@ -52,13 +67,12 @@ body {
 }
 
 .Page {
-    background-color: var(--main-color);
-    min-height: 80vh;
+    /* background-color: var(--main-color); */
     display: flex;
     flex-direction: column;
     font-size: calc(10px + 2vmin);
     color: white;
-    padding-top: 15vh;
+    padding-top: 5vh;
 }
 
 .App-link {
@@ -103,9 +117,17 @@ body {
 }
 
 .smallimg {
-    width: 250px;
-    height: 250px;
-    margin: 10px
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 250px) {
+    .smallimg {
+        display: none;
+    }
 }
 
 .dark-text {
