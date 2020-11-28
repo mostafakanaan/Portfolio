@@ -1,26 +1,28 @@
-import React from 'react';
-import Home from './components/Home';
-import MyNavbar from './components/Utils/MyNavbar';
+import React, { Component } from 'react'
+import Home from './components/Home'
+import Projects from './components/Projects'
+import About from './components/About'
+import Contact from './components/Contact'
+import MyNavbar from './components/Utils/MyNavbar'
+import Container from 'react-bootstrap/Container'
 
+export default class App extends Component {
 
+	componentDidMount() {
+		this.props.hideLoader();
+	}
 
-function App() {
-  return (
-    <div className="App">
-      <MyNavbar/>
-    <Home/>
-    <div className="Home" id="work">
-      My Projects
-    </div>
-    <div className="Home" id="about">
-      About me
-    </div>
-    <div className="Home" id="contact">
-      Contact form
-    </div>
-    </div>
-    );
-  }
-  
-  export default App;
-  
+	render() {
+		return (
+				<div className="App">
+					<MyNavbar />
+					<Container fluid>
+						<Home />
+						<Projects />
+						<About />
+						<Contact />
+					</Container>
+				</div>
+		);
+	}
+}
