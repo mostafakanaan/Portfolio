@@ -12,9 +12,7 @@ const showLoader = () => loader.classList.remove('loader--hide');
 const hideLoader = () => loader.classList.add('loader--hide');
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App hideLoader={hideLoader}
-      showLoader={showLoader}  />
-  </React.StrictMode>,
+  <App hideLoader={hideLoader}
+    showLoader={showLoader} />,
   document.getElementById('root')
 );

@@ -4,7 +4,7 @@ import { Navbar, Nav, Badge } from 'react-bootstrap';
 export default class MyNavbar extends React.Component {
     render() {
         return (
-            <Navbar bg="white" expand="lg" sticky="top">
+            <Navbar bg="white" expand="lg" sticky="top" id='navbar'>
                 <Navbar.Brand href="/"><h1><Badge variant="dark">M.Kanaan</Badge></h1></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

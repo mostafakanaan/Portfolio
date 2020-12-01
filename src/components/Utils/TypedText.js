@@ -7,8 +7,8 @@ export default class TypedText extends React.Component {
 
     const options = {
       strings: strings,
-      typeSpeed: 100,
-      backSpeed: 50,
+      typeSpeed: 75,
+      backSpeed: 25,
       onComplete: () => {
         this.typed.reset();
       }
@@ -25,7 +25,7 @@ export default class TypedText extends React.Component {
   render() {
     return (
       <div className="wrap">
-        <div className="type-wrap dark-text">
+        <div className="type-wrap">
           <span>{this.props.text}</span>
           <span
             style={{ whiteSpace: 'pre' }}

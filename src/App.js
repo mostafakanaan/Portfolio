@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import Home from './components/Home'
-// import Projects from './components/Projects'
-// import About from './components/About'
-// import Contact from './components/Contact'
-import MyNavbar from './components/Utils/MyNavbar'
+import Projects from './components/Projects'
+import About from './components/About'
+import Contact from './components/Contact'
+// import MyNavbar from './components/Utils/MyNavbar'
 import Container from 'react-bootstrap/Container'
 
 export default class App extends Component {
@@ -14,14 +14,15 @@ export default class App extends Component {
 
 	render() {
 		return (
-			<Container fluid className='App'>
-					<MyNavbar />
-					<Home />	
-					{/* <Projects />
+			<div>
+				{/* <MyNavbar /> */}
+				<Container fluid className='App'>
+					<Home />
+					<Projects />
 					<About />
-					<Contact /> */}
-			</Container>
-				
+					<Contact />
+				</Container>
+			</div>
 		);
 	}
 }
