@@ -20,6 +20,12 @@ html, body, .Page {
     min-height: 100vh;
 }
 
+a:hover {
+    color: #8D2C92;
+    text-decoration: wavy;
+    font-weight: bold;
+}
+
 #work, #about, #contact {
     /* background-color: var(--main-color); */
     min-height: 100vh;
@@ -68,7 +74,6 @@ html, body, .Page {
     }
 }
 
-
 #navbar {
     width: 100%;
     max-height: 10vh;
@@ -83,15 +88,14 @@ html, body, .Page {
 }
 
 #aboutBtn {
-    max-width: 20vh;
-    margin-top: 5vh;
-    margin-right: 27vh;
+
+    margin-top: 3vh;
     margin-left: 3vh;
     font-weight: bold;
     opacity: .8;
 }
 
-#aboutBtn:hover {
+#aboutBtn:hover, #aboutBtn:active {
     transform: scale(1.1);
     font-weight: bold;
     opacity: .9;
@@ -100,13 +104,12 @@ html, body, .Page {
 }
 
 #letsTalkBtn {
-    max-width: 30vh;
     float: right;
     font-weight: bold;
     opacity: .8;
 }
 
-#letsTalkBtn:hover {
+#letsTalkBtn:hover, #letsTalkBtn:active {
     transform: scale(1.1);
     font-weight: bold;
     opacity: .9;
@@ -115,34 +118,26 @@ html, body, .Page {
 }
 
 #introBox {
-    max-width: 50vh;
+    max-width: 80vh;
     margin-bottom: auto;
-    margin-right: auto;
 }
 
 #letsTalkBox {
-    max-width: 30vh;
     margin-bottom: auto;
     margin-left: auto;
 }
 
-.myfooter {
-    margin-top: auto;
-    max-height: 10vh;
-}
-
 #scrollBtn {
-    font-size: 5vh;
+    font-size: 10vh;
     margin-top: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1vh;
     bottom: 0;
     position: relative;
     animation: MoveUpDown 1s linear infinite;
 }
 
-#scrollBtn:hover {
+#scrollBtn:hover, #scrollBtn:active {
     transform: scale(1.2);
     cursor: pointer;
     color: #8D2C92;
@@ -165,13 +160,25 @@ html, body, .Page {
 }
 
 .Page {
-    /* background-color: var(--main-color); */
     min-width: 100%;
     display: flex;
     flex-direction: column;
     font-size: calc(10px + 2vmin);
     color: white;
+}
+
+#homeBody {
+    height: 50vh;
+    min-width: 100%;
+    display: flex;
     padding-top: 5vh;
+}
+
+#homeFooter {
+    height: 50vh;
+    min-width: 100%;
+    display: flex;
+    padding-bottom: 5vh;
 }
 
 .App-link {
@@ -224,6 +231,10 @@ html, body, .Page {
     margin-right: auto;
 }
 
+.wrap {
+    margin-bottom: 4vh;
+}
+
 @media screen and (max-width: 250px) {
     .smallimg {
         display: none;
@@ -234,18 +245,34 @@ html, body, .Page {
     color: var(--main-color);
 }
 
-.fa-facebook:hover {
+#socialmedia {
+    margin-left: auto;
+    margin-top: auto;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.fa-facebook:hover, .fa-facebook:active {
     color: #1186EE;
+    transform: scale(1.3);
 }
 
-.fa-instagram:hover {
+.fa-instagram:hover, .fa-instagram:active {
     color: #AA328B;
+    transform: scale(1.3);
 }
 
-.fa-twitter:hover {
+.fa-twitter:hover, .fa-twitter:active {
     color: #1EA1F2;
+    transform: scale(1.3);
 }
 
-.fa-envelope:hover {
+.fa-envelope:hover, .fa-envelope:active {
     color: #F95439;
+    transform: scale(1.3);
+}
+
+.greyedout {
+    background-color: #8a8a8a
 }

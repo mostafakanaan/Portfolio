@@ -4,12 +4,12 @@ import { Card} from 'react-bootstrap'
 export default class Project extends Component {
     render() {
         return (
-            <Card >
+            <Card className="greyedout">
                 <Card.Img variant="top" src={require('../../img/coming_soon.jpg')} />
                 <Card.Body>
-                    <Card.Title className='dark-text'>Card Title</Card.Title>
+                    <Card.Title className='dark-text'>Project Name</Card.Title>
                     <Card.Text className='dark-text'>
-                        Some quick example text..
+                        <i className="fas fa-lock"></i>
                     </Card.Text>
                     {/* <Button variant="dark" disabled>Code <i className="fas fa-code"></i></Button>
                     <br></br>

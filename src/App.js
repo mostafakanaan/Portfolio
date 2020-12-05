@@ -5,6 +5,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 // import MyNavbar from './components/Utils/MyNavbar'
 import Container from 'react-bootstrap/Container'
+//import smoothscroll from 'smoothscroll-polyfill';
 
 export default class App extends Component {
 

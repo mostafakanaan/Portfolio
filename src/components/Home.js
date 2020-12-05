@@ -3,9 +3,10 @@ import TypedText from './Utils/TypedText'
 import MyIcon from './Utils/MyIcon'
 import { Button, Row, Col, OverlayTrigger, Tooltip } from 'react-bootstrap'
 
-const goTo = (url) => {
-    const newWindow = window.open(url, '_self', 'noopener,noreferrer')
-    if (newWindow) newWindow.opener = null
+const goTo = (id) => {
+    // const newWindow = window.open(url, '_self', 'noopener,noreferrer')
+    // if (newWindow) newWindow.opener = null
+    document.getElementById(id).scrollIntoView(true, { behavior: 'smooth' })
 }
 
 export default class Home extends Component {
@@ -14,44 +15,44 @@ export default class Home extends Component {
 
         return (
             <div id='home' className='Page'>
-                <Row>
-                    <Col>
+                <Row id='homeBody'>
+                    <Col md="auto">
                         <div id='introBox'>
                             <h1>Hi, I'm Mustafa</h1>
                             <TypedText
                                 strings={[
-                                    'software developer',
                                     'student at FH-Aachen',
+                                    'software developer',
                                     'freelancer',
                                     ''
-                                ]} text="I'm a "
+                                ]} text="a "
                             />
+
+                            <h6>Currently working
+                        @ <a target='blank' href='https://www.eutech-scientific.de/'>EUtech Scientific Engineering</a>
+                            </h6>
                             <Button id='aboutBtn' variant="light"
-                                onClick={() => { goTo('#about') }}>Learn more <i className="fas fa-arrow-right"></i></Button>
+                                onClick={() => { goTo('about') }}>Learn more <i className="fas fa-arrow-right"></i></Button>
                         </div>
                     </Col>
-                    <Col id='letsTalkBox'>
+                    <Col xs lg="2" id='letsTalkBox'>
                         <Button id='letsTalkBtn' variant="light"
-                            onClick={() => { goTo('#contact') }}>Let's Talk!</Button>
+                            onClick={() => { goTo('contact') }}>Let's Talk!</Button>
                     </Col>
                 </Row>
-
-
-                <Row className='myfooter'>
+                <Row id='homeFooter'>
                     <OverlayTrigger overlay={<Tooltip id='tooltip'>My Projects</Tooltip>}>
-                        <span id='scrollBtn' onClick={() => { goTo('#work') }}>
+                        <span id='scrollBtn' onClick={() => { goTo('work') }}>
                             <i className="fas fa-angle-double-down"></i>
                         </span>
                     </OverlayTrigger>
-
-                    <MyIcon uri='https://facebook.com/SteveKanaan/' icon='fab fa-facebook' />
-                    <MyIcon uri='https://instagram.com/_dermusti/' icon='fab fa-instagram' />
-                    <MyIcon uri='https://twitter.com/mkanaan_de' icon='fab fa-twitter' />
-                    <MyIcon uri='mailto:muus.kaan@hotmail.com' icon='far fa-envelope' />
+                    <div id='socialmedia' >
+                        <MyIcon uri='https://facebook.com/SteveKanaan/' icon='fab fa-facebook' />
+                        <MyIcon uri='https://instagram.com/_dermusti/' icon='fab fa-instagram' />
+                        <MyIcon uri='https://twitter.com/mkanaan_de' icon='fab fa-twitter' />
+                        <MyIcon uri='mailto:muus.kaan@hotmail.com' icon='far fa-envelope' />
+                    </div>
                 </Row>
-
-
-
             </div>
         );
     }
