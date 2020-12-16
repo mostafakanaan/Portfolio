@@ -88,7 +88,6 @@ a:hover {
 }
 
 #aboutBtn {
-
     margin-top: 3vh;
     margin-left: 3vh;
     font-weight: bold;
@@ -327,4 +326,8 @@ a:hover {
 #contactJumbotron {
     padding-right: 2vw;
     padding-left: 2vw;
+}
+
+.jumbotron {
+    background-color: rgba(255, 255, 255, 0.9)
 }
