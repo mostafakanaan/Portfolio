@@ -50,7 +50,7 @@ export default class Home extends Component {
                         <MyIcon uri='https://facebook.com/SteveKanaan/' icon='fab fa-facebook' />
                         <MyIcon uri='https://instagram.com/_dermusti/' icon='fab fa-instagram' />
                         <MyIcon uri='https://twitter.com/mkanaan_de' icon='fab fa-twitter' />
-                        <MyIcon uri='mailto:muus.kaan@hotmail.com' icon='far fa-envelope' />
+                        <MyIcon uri='https://github.com/mostafakanaan' icon='fab fa-github' />
                     </div>
                 </Row>
             </div>

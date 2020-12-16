@@ -117,14 +117,34 @@ a:hover {
     border-color: #8D2C92;
 }
 
+#submitBtn {
+    font-size: inherit;
+    min-width: 10vw;
+    font-weight: bold;
+    opacity: .8;
+    border: 1px solid var(--main-color);
+    color: white;
+    background-color: var(--main-color);
+}
+
+#submitBtn:hover, #submitBtn:active {
+    transform: scale(1.1);
+    font-weight: bold;
+    opacity: .9;
+    background-color: #8D2C92;
+    border-color: #8D2C92;
+}
+
 #introBox {
     max-width: 80vh;
     margin-bottom: auto;
+    margin-left: 1vw;
 }
 
 #letsTalkBox {
     margin-bottom: auto;
     margin-left: auto;
+    margin-right: 1vw;
 }
 
 #scrollBtn {
@@ -206,6 +226,7 @@ a:hover {
 .clickableIcon {
     cursor: pointer;
     margin: 20px;
+    margin-left: 10px;
     font-size: calc(10px + 2vmin)
 }
 
@@ -263,6 +284,11 @@ a:hover {
     transform: scale(1.3);
 }
 
+.fa-github:hover, .fa-github:active {
+    color: #586069;
+    transform: scale(1.3);
+}
+
 .fa-twitter:hover, .fa-twitter:active {
     color: #1EA1F2;
     transform: scale(1.3);
@@ -275,4 +301,30 @@ a:hover {
 
 .greyedout {
     background-color: #8a8a8a
+}
+
+.input {
+    width: 50vw;
+}
+
+#submitting {
+    color: #8D2C92;
+}
+
+.show {
+    visibility: visible;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+#contactJumbotron {
+    padding-right: 2vw;
+    padding-left: 2vw;
 }
