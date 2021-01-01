@@ -60,12 +60,26 @@ export default class Contact extends Component {
     render() {
         return (
             <div className="Page" id="contact">
+                <div className='WelcomeText'>
+                <h1><MyIcon uri='https://twitter.com/mkanaan_de' icon='fab fa-linkedin-in' /></h1>
+                    <h1><MyIcon uri='https://twitter.com/mkanaan_de' icon='fab fa-twitter' /></h1>
+                    <h1><MyIcon uri='https://github.com/mostafakanaan' icon='fab fa-github' /></h1>
+                    <h1><MyIcon uri='https://facebook.com/SteveKanaan/' icon='fab fa-facebook' /></h1>
+                    <h1><MyIcon uri='https://instagram.com/_dermusti/' icon='fab fa-instagram' /></h1>
+                    <h1><MyIcon uri='mailto:muus.kaan@hotmail.com' icon='far fa-envelope' /></h1>
+                </div>
 
-                <Jumbotron fluid id="contactJumbotron">
+                {/* <Jumbotron fluid id="contactJumbotron">
 
                     <h2 className='dark-text'>Hello there,</h2>
                     <h5 className='dark-text'>Get in touch using the form below or email me
                     <MyIcon uri='mailto:muus.kaan@hotmail.com' icon='far fa-envelope' /> </h5>
+                    <MyIcon uri='https://facebook.com/SteveKanaan/' icon='fab fa-facebook dark-text' />
+                    <MyIcon uri='https://instagram.com/_dermusti/' icon='fab fa-instagram dark-text' />
+                    <MyIcon uri='https://twitter.com/mkanaan_de' icon='fab fa-twitter dark-text' />
+                    <MyIcon uri='https://github.com/mostafakanaan' icon='fab fa-github dark-text' />
+
+                    <br></br>
                     <br></br>
                     <form autoComplete="off" name="submit-to-google-sheet" onSubmit={this.handleSubmit}>
                         <CssTextField required className="input" label="Name" variant="outlined" name="name" />
@@ -96,7 +110,9 @@ export default class Contact extends Component {
                             </Alert>
                         </Snackbar>
                     </form>
-                </Jumbotron>
+
+
+                </Jumbotron> */}
             </div>
         )
     }
