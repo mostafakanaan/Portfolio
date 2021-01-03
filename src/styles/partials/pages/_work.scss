@@ -1,0 +1,17 @@
+.smallimg {
+    max-width: 300px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width: 250px) {
+        display: none;
+    }
+}
+
+.card-deck {
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+}

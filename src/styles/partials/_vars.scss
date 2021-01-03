@@ -1,0 +1,49 @@
+// Helpers
+$opensans-font-path: "../Open_Sans";
+
+// Colors
+$light: rgb(240, 249, 255);
+$dark: #2a231f;
+$orange: #ff5d00;
+$blue: #0001ff;
+
+// Sizes
+$size-1: calc(0.75em + 1vmin);
+$size-2: calc(0.75em + 2vmin);
+$size-3: calc(0.75em + 3vmin);
+$size-4: calc(0.75em + 4vmin);
+$size-5: calc(0.75em + 5vmin);
+
+// x-y
+@mixin fullscreen {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+// Fonts
+$primary-font: opensans;
+
+@font-face {
+    font-family: opensans;
+    src: url($opensans-font-path + "/OpenSans-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: opensans-italic;
+    src: url($opensans-font-path + "/OpenSans-SemiBoldItalic.ttf");
+}
+
+@font-face {
+    font-family: opensans-bold;
+    src: url($opensans-font-path + "/OpenSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: opensans-bolditalic;
+    src: url($opensans-font-path + "/OpenSans-BoldItalic.ttf");
+}
+
+@font-face {
+    font-family: opensans-extrabold;
+    src: url($opensans-font-path + "/OpenSans-ExtraBold.ttf");
+}

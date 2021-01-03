@@ -1,0 +1,103 @@
+.WelcomeText {
+    font-size: $size-1 !important;
+}
+
+#homeBody {
+    height: 50vh;
+    min-width: 100%;
+    display: flex;
+    padding-top: 2vh;
+}
+
+#aboutBtn {
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    opacity: 0.8;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transform: scale(1.1);
+            font-weight: bold;
+            opacity: 0.9;
+            background-color: $orange;
+            border-color: $orange;
+        }
+    }
+
+    &:active {
+        transform: scale(1.1);
+        font-weight: bold;
+        opacity: 0.9;
+        background-color: $orange;
+        border-color: $orange;
+    }
+}
+
+#letsTalkBtn {
+    float: right;
+    font-weight: bold;
+    opacity: 0.8;
+    margin-top: 3vh;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 10vw;
+    height: auto;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transform: scale(1.1);
+            font-weight: bold;
+            opacity: 0.9;
+            background-color: $orange;
+            border-color: $orange;
+        }
+    }
+
+    &:active {
+        transform: scale(1.1);
+        font-weight: bold;
+        opacity: 0.9;
+        background-color: $orange;
+        border-color: $orange;
+    }
+}
+
+#introBox {
+    max-width: 80vh;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+}
+
+#tooltip {
+    color: white;
+    font-weight: bold;
+    background-color: unset;
+    font-size: 3vh;
+}
+
+#scrollBtn {
+    font-size: 10vh;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    animation: MoveUpDown 1s linear infinite;
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+            color: $orange;
+        }
+    }
+
+    &:active {
+        transform: scale(1.2);
+        cursor: pointer;
+        color: $orange;
+    }
+}

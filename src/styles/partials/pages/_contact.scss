@@ -1,0 +1,121 @@
+#submitBtn {
+    font-size: inherit;
+    min-width: 10vw;
+    font-weight: bold;
+    opacity: 0.8;
+    border: 1px solid $dark;
+    color: white;
+    background-color: $dark;
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            transform: scale(1.1);
+            font-weight: bold;
+            opacity: 0.9;
+            background-color: $orange;
+            border-color: $orange;
+        }
+    }
+    &:active {
+        transform: scale(1.1);
+        font-weight: bold;
+        opacity: 0.9;
+        background-color: $orange;
+        border-color: $orange;
+    }
+}
+
+#submitting {
+    color: $orange;
+}
+
+
+#socialmedia {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-top: auto;
+    text-align: right;
+}
+
+.fa-facebook {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: #1186ee;
+            transform: scale(1.3);
+        }
+    }
+    &:active {
+        color: #1186ee;
+        transform: scale(1.3);
+    }
+}
+
+.fa-instagram {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: #aa328b;
+            transform: scale(1.3);
+        }
+    }
+    &:active {
+        color: #aa328b;
+        transform: scale(1.3);
+    }
+}
+
+.fa-github {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: #586069;
+            transform: scale(1.3);
+        }
+    }
+    &:active {
+        color: #586069;
+        transform: scale(1.3);
+    }
+}
+
+.fa-twitter {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: #1ea1f2;
+            transform: scale(1.3);
+        }
+    }
+    &:active {
+        color: #1ea1f2;
+        transform: scale(1.3);
+    }
+}
+
+.fa-envelope {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: #f95439;
+            transform: scale(1.3);
+        }
+    }
+    &:active {
+        color: #f95439;
+        transform: scale(1.3);
+    }
+}
+
+.fa-linkedin-in {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            color: #1377b5;
+            transform: scale(1.3);
+        }
+    }
+    &:active {
+        color: #1377b5;
+        transform: scale(1.3);
+    }
+}
+
+#contactJumbotron {
+    padding-right: 2vw;
+    padding-left: 2vw;
+}

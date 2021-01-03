@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './style.css';
+import './styles/style.css';
 import App from './App';
 
 const loader = document.querySelector('.loader');
