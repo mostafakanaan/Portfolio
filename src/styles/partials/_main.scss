@@ -90,9 +90,10 @@ a {
     left: calc(50% - 4em);
     width: 6em;
     height: 6em;
-    border: 1em dotted $blue;
+    border: 1em solid RGBA(0,0,0,0.2);
+    border-right: 1em solid #000000;
     border-radius: 50%;
-    animation: loading 1.1s infinite linear;
+    animation: loading 1.5s infinite linear;
     transition: opacity 0.3s;
 }
 

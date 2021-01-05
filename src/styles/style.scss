@@ -86,22 +86,25 @@
         top: -10%;
         right: -10%;
     }
-    &:hover {
-        animation: moon 10s linear infinite;
-    }
+
+    animation: moon 1000s linear infinite;
+
+    // &:hover {
+    //     animation: moon 10s linear infinite;
+    // }
 }
 
 @keyframes moon {
     0% {
-        right: -10%;
+        // right: -10%;
         transform: rotate(0deg);
     }
     50% {
-        right: 100%;
+        // right: 100%;
         transform: rotate(360deg);
     }
     100% {
-        right: -10%;
+        // right: -10%;
         transform: rotate(0deg);
     }
 }
