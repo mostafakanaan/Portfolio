@@ -1,29 +1,29 @@
 import React, { Component } from 'react'
 import MyIcon from './Utils/MyIcon'
-import { TextField, Button, Snackbar, Fade, CircularProgress } from '@material-ui/core'
-import MuiAlert from '@material-ui/lab/Alert'
-import { withStyles } from '@material-ui/core/styles'
-import { Jumbotron, Row } from 'react-bootstrap'
+// import { TextField } from '@material-ui/core'
+// import MuiAlert from '@material-ui/lab/Alert'
+// import { withStyles } from '@material-ui/core/styles'
+// import { Jumbotron, Row } from 'react-bootstrap'
 
-function Alert(props) {
-    return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
+// function Alert(props) {
+//     return <MuiAlert elevation={6} variant="filled" {...props} />;
+// }
 
-const CssTextField = withStyles({
-    root: {
-        '& label.Mui-focused': {
-            color: '#8D2C92',
-        },
-        '& .MuiInput-underline:after': {
-            borderBottomColor: '#8D2C92',
-        },
-        '& .MuiOutlinedInput-root': {
-            '&.Mui-focused fieldset': {
-                borderColor: '#8D2C92',
-            },
-        },
-    },
-})(TextField);
+// const CssTextField = withStyles({
+//     root: {
+//         '& label.Mui-focused': {
+//             color: '#8D2C92',
+//         },
+//         '& .MuiInput-underline:after': {
+//             borderBottomColor: '#8D2C92',
+//         },
+//         '& .MuiOutlinedInput-root': {
+//             '&.Mui-focused fieldset': {
+//                 borderColor: '#8D2C92',
+//             },
+//         },
+//     },
+// })(TextField);
 
 
 export default class Contact extends Component {

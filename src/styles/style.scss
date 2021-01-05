@@ -5,3 +5,103 @@
 @import "./partials/pages/about";
 @import "./partials/pages/contact";
 @import "./partials/keyframes";
+
+.test {
+    background-color: $dark;
+    // border: 5px solid black;
+    border-radius: 5px;
+    width: 50vw;
+    height: 50vh;
+    margin: auto;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    position: relative;
+}
+
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.stars {
+    background: black url("../img/stars.png") repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: -3;
+}
+
+.twinkling {
+    width: 10000px;
+    height: 100%;
+    background: transparent url("../img/twinkling.png") repeat;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
+
+    -moz-animation: move-background 70s linear infinite;
+    -ms-animation: move-background 70s linear infinite;
+    -o-animation: move-background 70s linear infinite;
+    -webkit-animation: move-background 70s linear infinite;
+    animation: move-background 70s linear infinite;
+}
+
+.clouds {
+    width: 10000px;
+    height: 100%;
+    background: transparent url("../img/clouds_repeat.png") repeat;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+
+    -moz-animation: move-background 150s linear infinite;
+    -ms-animation: move-background 150s linear infinite;
+    -o-animation: move-background 150s linear infinite;
+    -webkit-animation: move-background 150s linear infinite;
+    animation: move-background 150s linear infinite;
+}
+#home img {
+    height: 40vw;
+    width: 40vw;
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    z-index: 2;
+
+    @media only screen and (max-width: 1200px) {
+        height: 40vh;
+        width: 40vh;
+        top: -10%;
+        right: -10%;
+    }
+    &:hover {
+        animation: moon 10s linear infinite;
+    }
+}
+
+@keyframes moon {
+    0% {
+        right: -10%;
+        transform: rotate(0deg);
+    }
+    50% {
+        right: 100%;
+        transform: rotate(360deg);
+    }
+    100% {
+        right: -10%;
+        transform: rotate(0deg);
+    }
+}

@@ -33,14 +33,12 @@
 html {
   min-height: 100vh;
   min-width: 100vw;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 body {
   min-height: 100vh;
   min-width: 100vw;
-  overscroll-behavior-y: none;
   font-family: opensans;
 }
 
@@ -89,18 +87,13 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #f0f9ff;
-  scroll-snap-align: start;
-}
-
-#home,
-#about {
-  background: linear-gradient(75deg, rgba(10, 13, 15, 0.9) 0%, rgba(30, 30, 30, 0.95) 80%, rgba(255, 93, 0, 0.8) 100%), url(../img/background.jpg) no-repeat center center fixed;
-  background-size: cover;
 }
 
 #work,
+#about,
 #contact {
-  background: linear-gradient(105deg, rgba(10, 13, 15, 0.9) 0%, rgba(30, 30, 30, 0.95) 80%, rgba(255, 93, 0, 0.8) 100%), url(../img/background.jpg) no-repeat center center fixed;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(10, 13, 15, 0.9)), color-stop(80%, rgba(30, 30, 30, 0.95))), url(../img/background.jpg) no-repeat center center fixed;
+  background: linear-gradient(90deg, rgba(10, 13, 15, 0.9) 0%, rgba(30, 30, 30, 0.95) 80%), url(../img/background.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -147,13 +140,13 @@ a:active {
 .btn,
 button {
   font-family: opensans-bold !important;
-  color: #2a231f;
+  color: #070606;
 }
 
 .line {
   width: 100%;
   height: 3px;
-  border-bottom: 3px solid #2a231f;
+  border-bottom: 3px solid #070606;
   position: inherit;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -175,7 +168,7 @@ button {
 }
 
 .dark-text {
-  color: #2a231f;
+  color: #070606;
 }
 
 .show {
@@ -347,9 +340,9 @@ button {
   min-width: 10vw;
   font-weight: bold;
   opacity: 0.8;
-  border: 1px solid #2a231f;
+  border: 1px solid #070606;
   color: white;
-  background-color: #2a231f;
+  background-color: #070606;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -557,6 +550,175 @@ button {
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+
+.test {
+  background-color: #070606;
+  border-radius: 5px;
+  width: 50vw;
+  height: 50vh;
+  margin: auto;
+  margin-top: 10px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  position: relative;
+}
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.stars {
+  background: black url("../img/stars.png") repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: -3;
+}
+
+.twinkling {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("../img/twinkling.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -2;
+  -webkit-animation: move-background 70s linear infinite;
+  animation: move-background 70s linear infinite;
+}
+
+.clouds {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("../img/clouds_repeat.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-animation: move-background 150s linear infinite;
+  animation: move-background 150s linear infinite;
+}
+
+#home img {
+  height: 40vw;
+  width: 40vw;
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 1200px) {
+  #home img {
+    height: 40vh;
+    width: 40vh;
+    top: -10%;
+    right: -10%;
+  }
+}
+
+#home img:hover {
+  -webkit-animation: moon 10s linear infinite;
+          animation: moon 10s linear infinite;
+}
+
+@-webkit-keyframes moon {
+  0% {
+    right: -10%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    right: 100%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    right: -10%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes moon {
+  0% {
+    right: -10%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    right: 100%;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    right: -10%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 /*# sourceMappingURL=style.css.map */

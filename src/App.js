@@ -6,6 +6,7 @@ import Contact from './components/Contact'
 // import MyNavbar from './components/Utils/MyNavbar'
 import Container from 'react-bootstrap/Container'
 
+
 export default class App extends Component {
 
 	componentDidMount() {

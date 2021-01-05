@@ -17,14 +17,19 @@ export default class Home extends Component {
 
         return (
             <div className='Page' id='home'>
+                <div className="stars"></div>
+                <div className="twinkling"></div>
+                <div className="clouds"></div>
                 <div className='WelcomeText'>
+                    <img src={require('../img/moon.png')} alt="" />
+
                     <Tween from={{ y: '-100vh' }} duration={2} ease="power1.out">
 
                         <h1>Welcome to my portfolio</h1>
                     </Tween>
 
                     <Tween from={{ y: '100vh' }} duration={2} ease="power1.out">
-                        <h1>I'm still working on it...</h1>
+                        <h1>Still working on it . . .</h1>
 
                     </Tween>
 
