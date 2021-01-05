@@ -3,7 +3,9 @@ import React, { Component } from 'react'
 // import MyIcon from './Utils/MyIcon'
 // import { Button, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import { Tween } from 'react-gsap';
+import MyNavbar from './Utils/MyNavbar'
 
+let lastScroll = 0;
 
 // const goTo = (id) => {
 //     // const newWindow = window.open(url, '_self', 'noopener,noreferrer')
@@ -12,6 +14,25 @@ import { Tween } from 'react-gsap';
 // }
 
 export default class Home extends Component {
+
+    componentDidMount() {
+        // const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+        // const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+        const nav = document.querySelector('nav');
+
+        window.addEventListener('scroll', () => {
+
+            if (document.scrollingElement.scrollTop < lastScroll)
+                nav.classList.remove('fixed-nav');
+            else if (nav.getBoundingClientRect().top <= 0)
+                nav.classList.add('fixed-nav');
+
+
+            lastScroll = document.scrollingElement.scrollTop;
+        })
+
+
+    }
 
     render() {
 
@@ -32,8 +53,10 @@ export default class Home extends Component {
                         <h1>Still working on it . . .</h1>
 
                     </Tween>
+                    <MyNavbar />
 
                 </div>
+
                 {/* <div id='introBox'>
                     <h1>Hi, I'm Mustafa</h1>
                     <TypedText
@@ -62,8 +85,6 @@ export default class Home extends Component {
                         </span>
                     </OverlayTrigger>
                 </div> */}
-
-
             </div>
         );
     }

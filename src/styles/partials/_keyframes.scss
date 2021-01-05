@@ -72,3 +72,15 @@
         -webkit-transform: translate3d(1000px, 0px, 0px);
     }
 }
+
+@keyframes navbar {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10vh);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

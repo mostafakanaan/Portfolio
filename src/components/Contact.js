@@ -1,29 +1,29 @@
 import React, { Component } from 'react'
 import MyIcon from './Utils/MyIcon'
-// import { TextField } from '@material-ui/core'
-// import MuiAlert from '@material-ui/lab/Alert'
-// import { withStyles } from '@material-ui/core/styles'
-// import { Jumbotron, Row } from 'react-bootstrap'
+import { TextField, Button, CircularProgress, Snackbar, Fade } from '@material-ui/core'
+import MuiAlert from '@material-ui/lab/Alert'
+import { withStyles } from '@material-ui/core/styles'
+import { Jumbotron, Row } from 'react-bootstrap'
 
-// function Alert(props) {
-//     return <MuiAlert elevation={6} variant="filled" {...props} />;
-// }
+function Alert(props) {
+    return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
-// const CssTextField = withStyles({
-//     root: {
-//         '& label.Mui-focused': {
-//             color: '#8D2C92',
-//         },
-//         '& .MuiInput-underline:after': {
-//             borderBottomColor: '#8D2C92',
-//         },
-//         '& .MuiOutlinedInput-root': {
-//             '&.Mui-focused fieldset': {
-//                 borderColor: '#8D2C92',
-//             },
-//         },
-//     },
-// })(TextField);
+const CssTextField = withStyles({
+    root: {
+        '& label.Mui-focused': {
+            color: '#8D2C92',
+        },
+        '& .MuiInput-underline:after': {
+            borderBottomColor: '#8D2C92',
+        },
+        '& .MuiOutlinedInput-root': {
+            '&.Mui-focused fieldset': {
+                borderColor: '#8D2C92',
+            },
+        },
+    },
+})(TextField);
 
 
 export default class Contact extends Component {
@@ -60,24 +60,25 @@ export default class Contact extends Component {
     render() {
         return (
             <div className="Page" id="contact">
-                <div className='WelcomeText'>
+                {/* <div className='WelcomeText'>
                 <h1><MyIcon uri='https://twitter.com/mkanaan_de' icon='fab fa-linkedin-in' /></h1>
                     <h1><MyIcon uri='https://twitter.com/mkanaan_de' icon='fab fa-twitter' /></h1>
                     <h1><MyIcon uri='https://github.com/mostafakanaan' icon='fab fa-github' /></h1>
                     <h1><MyIcon uri='https://facebook.com/SteveKanaan/' icon='fab fa-facebook' /></h1>
                     <h1><MyIcon uri='https://instagram.com/_dermusti/' icon='fab fa-instagram' /></h1>
                     <h1><MyIcon uri='mailto:muus.kaan@hotmail.com' icon='far fa-envelope' /></h1>
-                </div>
+                </div> */}
 
-                {/* <Jumbotron fluid id="contactJumbotron">
+                <Jumbotron fluid id="contactJumbotron">
 
                     <h2 className='dark-text'>Hello there,</h2>
                     <h5 className='dark-text'>Get in touch using the form below or email me
-                    <MyIcon uri='mailto:muus.kaan@hotmail.com' icon='far fa-envelope' /> </h5>
-                    <MyIcon uri='https://facebook.com/SteveKanaan/' icon='fab fa-facebook dark-text' />
-                    <MyIcon uri='https://instagram.com/_dermusti/' icon='fab fa-instagram dark-text' />
+                    <MyIcon uri='mailto:work@mkanaan.de' icon='far fa-envelope' /> </h5>
+                    <MyIcon uri='https://de.linkedin.com/in/mos-kan' icon='fab fa-linkedin-in dark-text' />
                     <MyIcon uri='https://twitter.com/mkanaan_de' icon='fab fa-twitter dark-text' />
                     <MyIcon uri='https://github.com/mostafakanaan' icon='fab fa-github dark-text' />
+                    <MyIcon uri='https://facebook.com/SteveKanaan/' icon='fab fa-facebook dark-text' />
+                    <MyIcon uri='https://instagram.com/_dermusti/' icon='fab fa-instagram dark-text' />
 
                     <br></br>
                     <br></br>
@@ -112,7 +113,7 @@ export default class Contact extends Component {
                     </form>
 
 
-                </Jumbotron> */}
+                </Jumbotron>
             </div>
         )
     }

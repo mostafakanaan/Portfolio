@@ -10,8 +10,8 @@ export default class Projects extends Component {
             <div className="Page" id="work">
                 <CardDeck>
                     <Project />
-                    <Project />
-                    <Project />
+                    {/* <Project />
+                    <Project /> */}
                 </CardDeck>
 
 

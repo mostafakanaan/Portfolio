@@ -9,6 +9,8 @@ html {
 
     // scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    position: relative;
 }
 
 body {
@@ -17,6 +19,7 @@ body {
     // overscroll-behavior-y: none;
 
     font-family: $primary-font;
+    overflow-x: hidden;
 
     @media only screen and (max-width: 767px) {
         background-size: 100vw minmax(95vh, auto) !important;
@@ -47,6 +50,79 @@ h6 {
     text-align: center;
 }
 
+nav {
+    z-index: 10;
+    * {
+        z-index: 10;
+    }
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 15vh;
+    max-height: 15vh;
+    // background-color: rgba($color: #9a5151, $alpha: 0.4);
+    color: $light;
+    vertical-align: bottom;
+    a {
+        color: $light !important;
+        background-color: $orange;
+        border-radius: 5px;
+        padding: 10px;
+
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                text-decoration: none !important;
+                color: $light !important;
+                border: none;
+            }
+        }
+
+        &:active {
+            text-decoration: none !important;
+            color: $light !important;
+            border: none;
+        }
+    }
+    ul {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        height: 8vh;
+        width: 100%;
+        font-weight: 600;
+        font-size: larger;
+    }
+    li {
+        display: block;
+        flex: 1;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .logo {
+        background-color: $orange;
+        border-radius: 5px;
+        height: 8vh;
+        position: fixed;
+        left: 2vw;
+        top: 2vw;
+        a {
+            background-color: transparent;
+            &:hover {
+                background-color: transparent;
+            }
+        }
+        h1 {
+            margin: 0;
+        }
+    }
+}
+
 .Page {
     @include fullscreen();
     display: flex;
@@ -57,8 +133,11 @@ h6 {
 }
 
 #work,
-#about,
 #contact {
+    background-color: white;
+}
+
+#about {
     background: linear-gradient(90deg, rgba(10, 13, 15, 0.9) 0%, rgba(30, 30, 30, 0.95) 80%),
         url(../img/background.jpg) no-repeat center center fixed;
     background-size: cover;
@@ -90,7 +169,7 @@ a {
     left: calc(50% - 4em);
     width: 6em;
     height: 6em;
-    border: 1em solid RGBA(0,0,0,0.2);
+    border: 1em solid RGBA(0, 0, 0, 0.2);
     border-right: 1em solid #000000;
     border-radius: 50%;
     animation: loading 1.5s infinite linear;
@@ -135,6 +214,17 @@ button {
     color: $dark;
 }
 
+.fixed-nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: rgba($color: $dark, $alpha: 0.9);
+
+    ul {
+        width: 30vw;
+    }
+}
+
 .show {
     visibility: visible;
     display: flex;
@@ -153,7 +243,8 @@ button {
 }
 
 .greyedout {
-    background-color: #8a8a8a;
+    background-color: #504d4d8a;
+    cursor: not-allowed;
 }
 
 .input {

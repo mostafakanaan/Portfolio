@@ -7,7 +7,7 @@ export default class Project extends Component {
             <Card className="greyedout">
                 <Card.Img variant="top" src={require('../../img/coming_soon.jpg')} />
                 <Card.Body>
-                    <Card.Title className='dark-text'>Project Name</Card.Title>
+                    <Card.Title><h2 className='dark-text'>Projects</h2></Card.Title>
                     <Card.Text className='dark-text'>
                         <i className="fas fa-lock"></i>
                     </Card.Text>

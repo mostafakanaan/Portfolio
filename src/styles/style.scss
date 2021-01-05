@@ -19,7 +19,7 @@
 }
 
 .background-container {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
@@ -76,15 +76,15 @@
     height: 40vw;
     width: 40vw;
     position: absolute;
-    top: -10%;
-    right: -10%;
+    top: -20%;
+    right: -20%;
     z-index: 2;
 
     @media only screen and (max-width: 1200px) {
         height: 40vh;
         width: 40vh;
-        top: -10%;
-        right: -10%;
+        top: -20%;
+        right: -20%;
     }
 
     animation: moon 1000s linear infinite;
