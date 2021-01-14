@@ -9,7 +9,6 @@ html {
 
     // scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
-    overflow-x: hidden;
     position: relative;
 }
 
@@ -26,7 +25,6 @@ body {
     // overscroll-behavior-y: none;
 
     font-family: $primary-font;
-    overflow: hidden !important;
 
     @media only screen and (max-width: 767px) {
         background-size: 100vw minmax(95vh, auto) !important;
@@ -116,10 +114,13 @@ nav {
     .logo {
         background-color: $orange;
         border-radius: 5px;
-        height: calc(0.75em + 6vmin);
+        border: 2px #cb530e solid;
+        height: calc(1em + 6vmin);
+        width: calc(1em + 35vmin);
         position: fixed;
         left: 2vw;
         top: 2vw;
+        z-index: 50;
         a {
             background-color: transparent;
             &:hover {

@@ -35,7 +35,6 @@ html {
   min-width: 100vw;
   max-width: 100vw;
   scroll-behavior: smooth;
-  overflow-x: hidden;
   position: relative;
 }
 
@@ -51,7 +50,6 @@ body {
   min-width: 100vw;
   max-width: 100vw;
   font-family: opensans;
-  overflow: hidden !important;
 }
 
 @media only screen and (max-width: 767px) {
@@ -168,10 +166,13 @@ nav li:hover {
 nav .logo {
   background-color: #ff5d00;
   border-radius: 5px;
-  height: calc(0.75em + 6vmin);
+  border: 2px #cb530e solid;
+  height: calc(1em + 6vmin);
+  width: calc(1em + 35vmin);
   position: fixed;
   left: 2vw;
   top: 2vw;
+  z-index: 50;
 }
 
 nav .logo a {
@@ -520,7 +521,8 @@ button {
 }
 
 .card-deck {
-  max-width: 90vw;
+  max-width: 80vw;
+  max-height: 80vh;
   margin-left: auto;
   margin-right: auto;
 }
@@ -531,10 +533,28 @@ button {
           transform: scale(3);
 }
 
+@media only screen and (max-width: 767px) {
+  .fa-lock {
+    margin-top: 10px;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+}
+
+.card-title > h2 {
+  margin-bottom: 0;
+}
+
 .card {
-  height: 80vh;
+  height: 75vh;
   -webkit-box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media only screen and (max-width: 767px) {
+  .card {
+    height: 50vh;
+  }
 }
 
 #submitBtn {
@@ -671,6 +691,24 @@ button {
 #contactJumbotron {
   padding-right: 2vw;
   padding-left: 2vw;
+}
+
+#contactJumbotron h5.dark-text {
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input label.Mui-focused {
+  color: #ff5d00 !important;
+}
+
+.input .MuiInput-underline:after {
+  border-bottom-color: #ff5d00 !important;
+}
+
+.input .Mui-focused fieldset {
+  border-color: #ff5d00 !important;
 }
 
 @-webkit-keyframes loading {

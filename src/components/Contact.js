@@ -2,30 +2,11 @@ import React, { Component } from 'react'
 import MyIcon from './Utils/MyIcon'
 import { TextField, Button, CircularProgress, Snackbar, Fade } from '@material-ui/core'
 import MuiAlert from '@material-ui/lab/Alert'
-import { withStyles } from '@material-ui/core/styles'
 import { Jumbotron, Row } from 'react-bootstrap'
 
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
 }
-
-const CssTextField = withStyles({
-    root: {
-        '& label.Mui-focused': {
-            color: '#8D2C92',
-        },
-        '& .MuiInput-underline:after': {
-            borderBottomColor: '#8D2C92',
-        },
-        '& .MuiOutlinedInput-root': {
-            '&.Mui-focused fieldset': {
-                borderColor: '#8D2C92',
-            },
-        },
-    },
-})(TextField);
-
-
 export default class Contact extends Component {
     constructor() {
         super();
@@ -83,16 +64,16 @@ export default class Contact extends Component {
                     <br></br>
                     <br></br>
                     <form autoComplete="off" name="submit-to-google-sheet" onSubmit={this.handleSubmit}>
-                        <CssTextField required className="input" label="Name" variant="outlined" name="name" />
+                        <TextField required className="input" label="Name" variant="outlined" name="name" />
                         <br></br>
                         <br></br>
-                        <CssTextField required className="input" label="Email" variant="outlined" name="email" />
+                        <TextField required className="input" label="Email" variant="outlined" name="email" />
                         <br></br>
                         <br></br>
-                        <CssTextField className="input" label="Phone Number" variant="outlined" name="number" />
+                        <TextField className="input" label="Phone Number" variant="outlined" name="number" />
                         <br></br>
                         <br></br>
-                        <CssTextField required className="input" label="Message" rows={3} variant="outlined" multiline name="message" />
+                        <TextField required className="input" label="Message" rows={3} variant="outlined" multiline name="message" />
                         <br></br>
                         <Row className={this.state.loading}>
                             <CircularProgress id="submitting" />

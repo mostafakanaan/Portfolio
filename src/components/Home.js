@@ -7,12 +7,6 @@ import MyNavbar from './Utils/MyNavbar'
 
 let lastScroll = 0;
 
-// const goTo = (id) => {
-//     // const newWindow = window.open(url, '_self', 'noopener,noreferrer')
-//     // if (newWindow) newWindow.opener = null
-//     document.getElementById(id).scrollIntoView(true, { behavior: 'smooth' })
-// }
-
 export default class Home extends Component {
 
     componentDidMount() {

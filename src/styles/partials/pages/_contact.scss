@@ -28,7 +28,6 @@
     color: $orange;
 }
 
-
 #socialmedia {
     display: flex;
     flex-direction: column;
@@ -118,4 +117,24 @@
 #contactJumbotron {
     padding-right: 2vw;
     padding-left: 2vw;
+    h5.dark-text {
+        max-width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.input {
+    label.Mui-focused {
+        color: $orange !important;
+    }
+
+    .MuiInput-underline:after {
+        border-bottom-color: $orange !important;
+    }
+    // MuiInputBase-root MuiOutlinedInput-root MuiInputBase-formControl
+    // MuiInputBase-input MuiOutlinedInput-input
+    .Mui-focused fieldset {
+        border-color: $orange !important;
+    }
 }

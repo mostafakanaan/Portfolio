@@ -19,5 +19,5 @@ document.addEventListener("DOMContentLoaded", function () {
         showLoader={showLoader} />,
       document.getElementById('root')
     );
-  }, 1000);
+  }, 500);
 });

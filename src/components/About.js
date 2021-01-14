@@ -14,7 +14,7 @@ export default class About extends Component {
                     </Reveal>
                     <h2>My name is Mustafa Kanaan</h2>
                     <h2>Currently working at:</h2>
-                    <h2><a target='blank' href='https://www.eutech-scientific.de/'>EUtech Scientific Engineering</a></h2>
+                    <h2><a target='_blank' rel='noopener noreferrer' href='https://www.eutech-scientific.de/'>EUtech Scientific Engineering</a></h2>
                 </div>
                 {/* <Jumbotron fluid>
                     <Row>
