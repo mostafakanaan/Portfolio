@@ -33,16 +33,25 @@
 html {
   min-height: 100vh;
   min-width: 100vw;
+  max-width: 100vw;
   scroll-behavior: smooth;
   overflow-x: hidden;
   position: relative;
 }
 
+#body-wrapper {
+  overflow-x: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
 body {
   min-height: 100vh;
   min-width: 100vw;
+  max-width: 100vw;
   font-family: opensans;
-  overflow-x: hidden;
+  overflow: hidden !important;
 }
 
 @media only screen and (max-width: 767px) {
@@ -54,6 +63,7 @@ body {
 .App {
   min-height: 100%;
   padding: 0;
+  overscroll-behavior-x: contain;
 }
 
 h1 {
@@ -158,7 +168,7 @@ nav li:hover {
 nav .logo {
   background-color: #ff5d00;
   border-radius: 5px;
-  height: 8vh;
+  height: calc(0.75em + 6vmin);
   position: fixed;
   left: 2vw;
   top: 2vw;
@@ -179,6 +189,7 @@ nav .logo h1 {
 .Page {
   min-height: 100vh;
   min-width: 100vw;
+  max-width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -432,6 +443,65 @@ button {
           transform: scale(1.2);
   cursor: pointer;
   color: #ff5d00;
+}
+
+#home img {
+  height: 40vw;
+  width: 40vw;
+  position: absolute;
+  top: -20%;
+  right: -20%;
+  z-index: 2;
+  -webkit-animation: moon 1000s linear infinite;
+          animation: moon 1000s linear infinite;
+}
+
+@media only screen and (max-width: 1200px) {
+  #home img {
+    height: 40vh;
+    width: 40vh;
+    top: -20%;
+    right: -20%;
+  }
+}
+
+.stars {
+  background: black url("../img/stars.png") repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: -3;
+}
+
+.twinkling {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("../img/twinkling.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -2;
+  -webkit-animation: move-background 70s linear infinite;
+  animation: move-background 70s linear infinite;
+}
+
+.clouds {
+  width: 10000px;
+  height: 100%;
+  background: transparent url("../img/clouds_repeat.png") repeat;
+  background-size: 1000px 1000px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  -webkit-animation: move-background 150s linear infinite;
+  animation: move-background 150s linear infinite;
 }
 
 .smallimg {
@@ -744,85 +814,6 @@ button {
   }
 }
 
-.test {
-  background-color: #070606;
-  border-radius: 5px;
-  width: 50vw;
-  height: 50vh;
-  margin: auto;
-  margin-top: 10px;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
-  position: relative;
-}
-
-.background-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-
-.stars {
-  background: black url("../img/stars.png") repeat;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  z-index: -3;
-}
-
-.twinkling {
-  width: 10000px;
-  height: 100%;
-  background: transparent url("../img/twinkling.png") repeat;
-  background-size: 1000px 1000px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -2;
-  -webkit-animation: move-background 70s linear infinite;
-  animation: move-background 70s linear infinite;
-}
-
-.clouds {
-  width: 10000px;
-  height: 100%;
-  background: transparent url("../img/clouds_repeat.png") repeat;
-  background-size: 1000px 1000px;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-  -webkit-animation: move-background 150s linear infinite;
-  animation: move-background 150s linear infinite;
-}
-
-#home img {
-  height: 40vw;
-  width: 40vw;
-  position: absolute;
-  top: -20%;
-  right: -20%;
-  z-index: 2;
-  -webkit-animation: moon 1000s linear infinite;
-          animation: moon 1000s linear infinite;
-}
-
-@media only screen and (max-width: 1200px) {
-  #home img {
-    height: 40vh;
-    width: 40vh;
-    top: -20%;
-    right: -20%;
-  }
-}
-
 @-webkit-keyframes moon {
   0% {
     -webkit-transform: rotate(0deg);
@@ -851,5 +842,25 @@ button {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
+}
+
+.test {
+  background-color: #070606;
+  border-radius: 5px;
+  width: 50vw;
+  height: 50vh;
+  margin: auto;
+  margin-top: 10px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  position: relative;
+}
+
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 /*# sourceMappingURL=style.css.map */

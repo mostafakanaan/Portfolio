@@ -38,9 +38,6 @@ export default class Home extends Component {
 
         return (
             <div className='Page' id='home'>
-                <div className="stars"></div>
-                <div className="twinkling"></div>
-                <div className="clouds"></div>
                 <div className='WelcomeText'>
                     <img src={require('../img/moon.png')} alt="" />
 

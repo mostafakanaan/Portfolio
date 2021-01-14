@@ -16,6 +16,9 @@ export default class App extends Component {
 		return (
 			<div>
 				<Container fluid className='App'>
+					<div className="stars"></div>
+					<div className="twinkling"></div>
+					<div className="clouds"></div>
 					<Home />
 					<Projects />
 					<About />

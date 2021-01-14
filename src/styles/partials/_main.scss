@@ -13,13 +13,20 @@ html {
     position: relative;
 }
 
+#body-wrapper {
+    overflow-x:hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
 body {
     @include fullscreen();
 
     // overscroll-behavior-y: none;
 
     font-family: $primary-font;
-    overflow-x: hidden;
+    overflow: hidden !important;
 
     @media only screen and (max-width: 767px) {
         background-size: 100vw minmax(95vh, auto) !important;
@@ -29,6 +36,8 @@ body {
 .App {
     min-height: 100%;
     padding: 0;
+    overscroll-behavior-x: contain;
+
 }
 
 h1 {
@@ -107,7 +116,7 @@ nav {
     .logo {
         background-color: $orange;
         border-radius: 5px;
-        height: 8vh;
+        height: calc(0.75em + 6vmin);
         position: fixed;
         left: 2vw;
         top: 2vw;

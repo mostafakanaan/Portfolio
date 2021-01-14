@@ -11,8 +11,13 @@ const showLoader = () => loader.classList.remove('loader--hide');
 
 const hideLoader = () => loader.classList.add('loader--hide');
 
-ReactDOM.render(
-  <App hideLoader={hideLoader}
-    showLoader={showLoader} />,
-  document.getElementById('root')
-);
+
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => {
+    ReactDOM.render(
+      <App hideLoader={hideLoader}
+        showLoader={showLoader} />,
+      document.getElementById('root')
+    );
+  }, 1000);
+});
